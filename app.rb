@@ -1,7 +1,7 @@
 require 'sinatra'
 require 'redis'
 
-UNLOCKER_HOST = '46.101.255.49'
+UNLOCKER_HOST = 'unlocker-web.herokuapp.com'
 
 redis = Redis.new
 
