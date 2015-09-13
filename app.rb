@@ -3,7 +3,7 @@ require 'redis'
 
 UNLOCKER_HOST = 'unlocker-web.herokuapp.com'
 
-redis = Redis.new
+redis = Redis.new(password: ENV['REDIS_URL'])
 
 get '/' do
   redirect "http://#{UNLOCKER_HOST}/authenticate" if request.host != UNLOCKER_HOST
